@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Demo RAM</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+    
+        <canvas id="c"  width="800" height="500" style="border: 1px solid #003366;  "><!--background-image:url('images/camioneta.png')-->
+        </canvas>
+
+        <div class="library">
+            <img src="images/img1.png" alt="">
+            <img src="images/img2.png" alt="">
+            <img src="images/img3.png" alt="">
+            <img src="images/img4.png" alt="">
+
+            <br>
+            <a href="#" id="c1"  onclick="changeColor('red')">Rojo</a>
+            <br>
+            <a href="#" id="c2" onclick="changeColor('blue')">Azul</a>
+            <br>
+            <a href="#" id="c3" onclick="changeColor('black')">negro</a>
+        </div>
+
+    </div>
+
+
+    <script src="https://www.unpkg.com/fabric@3.6.3/dist/fabric.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+<!--Documentacion
+
+http://fabricjs.com/customization
+https://stackoverflow.com/questions/55740759/fabric-js-layers-with-one-layer-with-controls
+https://github.com/fabricjs/fabric.js/wiki/How-fabric-canvas-layering-works
+
+texto -> http://fabricjs.com/fabric-intro-part-2
+
+imagen pagina de RAM -> https://es.ramtrucks.com/content/dam/fca-brands/na/ramtrucks/en_us/logoizer/CUT202020DT6L91A/left/main.png
+-->

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:blue;">
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.7.0/fabric.js"></script>
+    <canvas id="c" width="800" height="500"></canvas>
+    <script>
+
+        //var img01URL = 'https://www.google.com/images/srpr/logo4w.png';
+        var img01URL = 'http://127.0.0.1:5500/images/img1.png';
+
+        //var img02URL = 'http://fabricjs.com/lib/pug.jpg';
+
+var canvas = new fabric.Canvas('c', {
+  preserveObjectStacking: true,
+  height: 500,
+  width: 800,
+});
+canvas.controlsAboveOverlay = true
+fabric.Object.prototype.set({
+  transparentCorners: false,
+  cornerColor: "rgba(102,153,255,0.5)",
+  cornerSize: 12,
+  padding: 5
+});
+
+//fabric.Image.fromURL("", (img) => {
+  /*var img1 = img.scale(1).set({
+    left: 0,
+    top: 0,
+    selectable: false,
+    hasControls: false
+  });
+  //img1.scaleToWidth(canvas.getWidth());
+  canvas.centerObject(img1);
+  canvas.setBackgroundImage(img1, function() {
+    canvas.renderAll()
+  });*/
+
+
+  fabric.Image.fromURL(img01URL, (img) => {
+    var img2 = img.scale(1).set({
+      left: 0,
+      top: 0,
+      selectable: true,
+      hasControls: true
+    }).scaleToHeight(300);
+
+    img2.applyFilters();
+    canvas.add(img2);
+    canvas.centerObject(img2);
+    img2.setCoords();
+    canvas.setActiveObject(img2);
+});
+
+    fabric.Image.fromURL("https://es.ramtrucks.com/content/dam/fca-brands/na/ramtrucks/en_us/logoizer/CUT202020DT6L91A/left/main.png", (img) => {
+      var img3 = img.scale(1).set({
+        left: 0,
+        top: 0,
+        selectable: false,
+        hasControls: false
+      })
+      img3.applyFilters();
+      canvas.centerObject(img3);
+      canvas.setOverlayImage(img3, function() {
+        canvas.renderAll()
+      });
+    });
+
+  
+//});
+    </script>
+</body>
+</html>

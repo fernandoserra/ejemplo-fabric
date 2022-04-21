@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    /*background-color: #003366;*/
+}
+
+img{
+    max-width: 100%;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.library{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    overflow-y: auto;
+}
+
+.library img{
+    background: #eee;
+    margin-bottom: 10px;
+
+}
+
+.controls {
+    display: inline-block;
+    background-color: black;
+}
+
+
